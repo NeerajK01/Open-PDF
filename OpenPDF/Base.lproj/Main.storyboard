@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RdO-ZE-WJi">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenPDF" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDk-zK-6TC">
+                                <rect key="frame" x="148" y="98" width="118" height="30"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.46274509800000002" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Open PDF Online"/>
+                                <connections>
+                                    <action selector="openPDF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Xc-wi-p50"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a23-n8-WKR">
+                                <rect key="frame" x="16" y="98" width="122" height="30"/>
+                                <color key="backgroundColor" red="0.98564285039999999" green="0.84240400790000003" blue="0.29179847240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Open PDF Locally"/>
+                                <connections>
+                                    <action selector="localPdf:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nsg-sz-W3O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KDk-zK-6TC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="CbN-et-9S4"/>
+                            <constraint firstItem="a23-n8-WKR" firstAttribute="top" secondItem="KDk-zK-6TC" secondAttribute="top" id="SWd-KN-GbL"/>
+                            <constraint firstItem="KDk-zK-6TC" firstAttribute="leading" secondItem="a23-n8-WKR" secondAttribute="trailing" constant="10" id="ZcN-4t-Zi9"/>
+                            <constraint firstItem="KDk-zK-6TC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cCo-SR-Hdm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GKP-pY-g7k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="77.678571428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XFe-UV-8TC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RdO-ZE-WJi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aUX-3H-DQc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Gg1-iE-iu6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HgV-dQ-hvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="78"/>
+        </scene>
+    </scenes>
+</document>
